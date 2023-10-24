@@ -5,15 +5,15 @@ import (
 	"strings"
 )
 
-type Vertex struct {
+type Coordinate struct {
 	Lat, Long float64
 }
 
 // 类似 slice，单纯声明会使其为 nil
-var nilMap map[string]Vertex
+var nilMap map[string]Coordinate
 
 // map 的初始化形式
-var exampleMap = map[string]Vertex{
+var exampleMap = map[string]Coordinate{
 	"Bell Labs": {40.68433, -74.39967},
 	"Google":    {37.42202, -122.08408},
 }
@@ -24,9 +24,9 @@ func mapUsage() {
 	if nil == nilMap {
 		fmt.Println("This map is nil, you should call \"make\" to allocate it.")
 	}
-	nilMap = make(map[string]Vertex)
+	nilMap = make(map[string]Coordinate)
 	// 赋值
-	nilMap["Bell Labs"] = Vertex{
+	nilMap["Bell Labs"] = Coordinate{
 		40.68433, -74.39967,
 	}
 	// 引用

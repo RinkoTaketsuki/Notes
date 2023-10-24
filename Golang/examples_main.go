@@ -10,4 +10,5 @@ func main() {
 	example.Run3()
 	example.Run4()
 	example.Run5()
+	example.Run6()
 }
